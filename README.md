@@ -47,6 +47,6 @@ Anything we want to represent as a whole number. If it's a number, and contains 
 
 ### REAL
 
-Anything that's a plain old decimal like 1.3, or 2.25. SQLite will store decimals a precisely as 15 characters long. So, you could have 1.2345678912345 or 1234.5678912345, but 1.23456789123456789 would only store 1.2345678912345. In other database systems this is called 'double precision.'
+Anything that's a plain old decimal like 1.3, or 2.25. SQLite will store decimals up to 15 characters long. So, you could have 1.2345678912345 or 1234.5678912345, but 1.23456789123456789 would only store 1.2345678912345. In other database systems this is called 'double precision.'
 
 With these three types in hand, we are going to be able to work our way through the next several topics, and this whole typing thing is going to quickly be second nature for you.
