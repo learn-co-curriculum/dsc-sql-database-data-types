@@ -27,9 +27,9 @@ Typing gives us the ability to perform all kinds of operations with predictable 
 
 We're going to adhere strictly to only storing data that fits with the datatype we have given to a particular column.
 
-## Data Types
+## Datatypes
 
-Different database systems also have different datatypes available, which are important and useful to know whenever you are dealing with those systems. In SQLite there are five different types we will be dealing with, they are:
+Different database systems also have different datatypes available, which are important and useful to know whenever you are dealing with those systems. In SQLite there are five basic categories of datatypes we will be dealing with, they are:
 
 ```bash
 TEXT
@@ -39,18 +39,63 @@ REAL
 BLOB
 ```
 
-For now we'll cover just three types, and later on we'll also learn about a couple other useful types not listed here. Our types:
+These categories each contain several datatypes. Let's explore each category in more detail.
 
 ### TEXT
 
 Any alphanumeric characters which we want to represent as plain text. The body of this paragraph is text. Your name is text. Your email address is a piece of text. Your height, weight, and age, however, are probably not.
 
+Common text datatypes include:
+
+```bash
+	CHARACTER(20)
+	VARCHAR(225)
+	TEXT
+```
+
 ### INTEGER
 
 Anything we want to represent as a whole number. If it's a number and contains no letter or special characters or decimal points then we should store it as an integer. If we use it to perform math or create a comparison between two different rows in our database, then we definitely want to store it as an integer. If it's just numbers, it's generally not a bad idea to store it as an integer. You might never add two house address numbers together, but you might want to sort them numerically. For example in the preceding case, you might want to get the biggest number and not the longest piece of text.
+
+Common integer datatypes include:
+
+```bash
+	INT
+	INTEGER
+```
 
 ### REAL
 
 Anything that's a plain old decimal like 1.3 or 2.25. SQLite will store decimals up to 15 characters long. You can store 1.2345678912345 or 1234.5678912345, but 1.23456789123456789 would only store 1.2345678912345. In other database systems this is called 'double precision.'
 
 With these three types in hand, we are going to be able to work our way through the next several topics, and this whole typing concept is going to quickly be second nature for you.
+
+Common real datatypes include:
+
+```bash
+	FLOAT
+	REAL
+```
+
+###NUMERIC
+
+Common numeric datatypes include:
+
+```bash
+	NUMERIC
+	DECIMAL(10,5)
+	BOOLEAN
+	DATE
+	DATETIME
+```
+
+### BLOB
+
+You may encounter the `BLOB` datatype while you're Googling or doing any further reading on SQLite. For now, we will never use `BLOB`. It is generally used for holding binary data.
+
+##Additional Resources
+SQLite has a pretty complicated system of categorizing datatypes that involves `Storage Classes`, `Type Affinities`, and `Datatypes`. If you want a deeper dive check out the 
+[SQLite3 Documentation on Datatypes](http://www.sqlite.org/datatype3.html)
+
+
+
