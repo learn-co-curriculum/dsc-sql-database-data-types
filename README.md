@@ -36,7 +36,7 @@ TEXT
 NUMERIC
 INTEGER
 REAL
-NONE
+BLOB
 ```
 
 For now we'll cover just three types, and later on we'll also learn about a couple other useful types not listed here. Our types:
