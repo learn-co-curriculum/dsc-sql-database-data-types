@@ -1,12 +1,12 @@
 # SQL Column Data Types
 
 ## Overview 
-In this lesson, we'll cover why specifying data types in a database matters as well as the different types of data you can store in a SQL database.
+In this lesson, we'll cover why specifying data types in a database matters as well as the different types of data you can store in a SQLite database.
 
 ## Objectives
 
 1. Explain how specifying column data types in a database restricts the data entered and allows for operations to be performed with predictable results
-2. List five different types of data you can store in a SQLite database. 
+2. List four different types of data you can store in a SQLite database. 
 3. Define three specific SQLite database types: Text, Integer, and Real.
 
 ## Why Do Data Types Matter?
@@ -29,40 +29,23 @@ We're going to adhere strictly to only storing data that fits with the datatype 
 
 ## Datatypes
 
-Different database systems also have different datatypes available, which are important and useful to know whenever you are dealing with those systems. In SQLite there are five basic categories of datatypes we will be dealing with, they are:
+Different database systems also have different datatypes available, which are important and useful to know whenever you are dealing with those systems. SQLite is a good starting point to learn about datatypes because it only has four basic categories of datatypes; they are:
 
 ```bash
 TEXT
-NUMERIC
 INTEGER
 REAL
 BLOB
 ```
-
-These categories each contain several datatypes. Let's explore each category in more detail.
+Let's explore each category in more detail.
 
 ### TEXT
 
 Any alphanumeric characters which we want to represent as plain text. The body of this paragraph is text. Your name is text. Your email address is a piece of text. Your height, weight, and age, however, are probably not.
 
-Common text datatypes include:
-
-```bash
-	CHARACTER(20)
-	VARCHAR(225)
-	TEXT
-```
-
 ### INTEGER
 
 Anything we want to represent as a whole number. If it's a number and contains no letter or special characters or decimal points then we should store it as an integer. If we use it to perform math or create a comparison between two different rows in our database, then we definitely want to store it as an integer. If it's just numbers, it's generally not a bad idea to store it as an integer. You might never add two house address numbers together, but you might want to sort them numerically. For example in the preceding case, you might want to get the biggest number and not the longest piece of text.
-
-Common integer datatypes include:
-
-```bash
-	INT
-	INTEGER
-```
 
 ### REAL
 
@@ -70,31 +53,16 @@ Anything that's a plain old decimal like 1.3 or 2.25. SQLite will store decimals
 
 With these three types in hand, we are going to be able to work our way through the next several topics, and this whole typing concept is going to quickly be second nature for you.
 
-Common real datatypes include:
-
-```bash
-	FLOAT
-	REAL
-```
-
-###NUMERIC
-
-Common numeric datatypes include:
-
-```bash
-	NUMERIC
-	DECIMAL(10,5)
-	BOOLEAN
-	DATE
-	DATETIME
-```
-
 ### BLOB
 
-You may encounter the `BLOB` datatype while you're Googling or doing any further reading on SQLite. For now, we will never use `BLOB`. It is generally used for holding binary data.
+You may encounter the `BLOB` datatype while you're Googling or doing any further reading on SQLite. For now, we will not use `BLOB`. It is generally used for holding binary data.
 
-##Additional Resources
-SQLite has a pretty complicated system of categorizing datatypes that involves `Storage Classes`, `Type Affinities`, and `Datatypes`. If you want a deeper dive check out the 
+##Bonus: Note on SQLite
+To increase its compatibility with other database engines (E.G. mySQL or PostgreSQL), SQLite allows the programmer to use other common datatypes outside of the four mentioned above. This is why we are referring to `TEXT NUMERIC INTEGER REAL BLOB` as datatype "categories". All other common datatypes are lumped into one of the four existing datatypes recognized by SQLite. 
+
+For example, `INT` is a common datatype used outside of SQLite. SQLite won't complain if you define a column as an `INT` datatype. It will simply lump it into the `INTEGER` category and store it as such.
+
+To accommodate this, SQLite has a pretty complicated system of categorizing datatypes that involves `Storage Classes`, `Type Affinities`, and `Datatypes`. If you want a deeper dive check out the 
 [SQLite3 Documentation on Datatypes](http://www.sqlite.org/datatype3.html)
 
 
