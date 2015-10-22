@@ -11,7 +11,7 @@ In this lesson, we'll cover why specifying data types in a database matters as w
 
 ## Why Do Data Types Matter?
 
-We've learned that when we create a table, we need to include a name for it as well as define at least one column. We define columns in a CREATE statement by including a name, and a datatype to let SQLite know the kind of data it we will be storing there. The practice of explicitly declaring a type is known as "typing." 
+We've learned that when we create a table, we need to include a name for it as well as define at least one column. We define columns in a CREATE statement by including a name and a datatype to let SQLite know the kind of data it we will be storing there. The practice of explicitly declaring a type is known as "typing." 
 
 Why is it important that we use typing in our database? Simply put, typing allows us to exercise some level of control over our data. Typing not only informs our database of the kind of data we plan to store in a column but it also restricts it. For instance, look at the age column below in our cats table. What do we mean by age? What if we had this:
 
@@ -58,7 +58,7 @@ With these three types in hand, we are going to be able to work our way through 
 You may encounter the `BLOB` datatype while you're Googling or doing any further reading on SQLite. For now, we will not use `BLOB`. It is generally used for holding binary data.
 
 ##Bonus: Note on SQLite
-To increase its compatibility with other database engines (E.G. mySQL or PostgreSQL), SQLite allows the programmer to use other common datatypes outside of the four mentioned above. This is why we are referring to `TEXT NUMERIC INTEGER REAL BLOB` as datatype "categories". All other common datatypes are lumped into one of the four existing datatypes recognized by SQLite. 
+To increase its compatibility with other database engines (E.G. mySQL or PostgreSQL), SQLite allows the programmer to use other common datatypes outside of the four mentioned above. This is why we are referring to `TEXT INTEGER REAL BLOB` as datatype "categories". All other common datatypes are lumped into one of the four existing datatypes recognized by SQLite. 
 
 For example, `INT` is a common datatype used outside of SQLite. SQLite won't complain if you define a column as an `INT` datatype. It will simply lump it into the `INTEGER` category and store it as such.
 
