@@ -1,11 +1,11 @@
 # SQL Column Data Types
 
 ## Overview 
-In this lesson, we'll cover why specifying data types in a database matters as well as the different types of data you can store in a SQLite database.
+In this lesson, we'll cover the importance of specifying datatypes, and the different types of data you can store in a SQLite database.
 
 ## Objectives
 
-1. Explain how specifying column data types in a database restricts the data entered and allows for operations to be performed with predictable results
+1. Describe data typing and how it allows for operations to be performed with predictable results
 2. List four different types of data you can store in a SQLite database. 
 3. Define three specific SQLite database types: Text, Integer, and Real.
 
@@ -21,7 +21,7 @@ Why is it important that we use typing in our database? Simply put, typing allow
 | Hannah |  Tabby  |  two  |
 | Lil' Bub |  American Shorthair  |  5.5  |
 
-Did we intend age to be represented as a whole-number, a word, or a decimal? If we asked you to add up the ages of all the dogs you could simply convert the 'two' to 2 in your head, but your database can't do that. It doesn't have that ability because the logic involved in converting a word into a number would be dense and inefficient. What about different languages? What about different spellings? Capitalization, typos, or different hyphenation conventions? These are just some reasons this might start to get crazy. In other words, because databases are designed to store large amounts of data, they are very concerned with storing, accessing, and acting upon that data as efficiently, and normally, as possible.
+Did we intend age to be represented as a whole-number, a word, or a decimal? If we asked you to add up the ages of all the dogs you could simply convert the 'two' to 2 in your head, but your database can't do that. It doesn't have that ability because the logic involved in converting a word into a number would be dense and inefficient. What about different languages? What about different spellings? Capitalization, typos, or different hyphenation conventions? These are just some reasons this might start to get crazy. In other words, because databases are designed to store large amounts of data, they are very concerned with storing, accessing, and acting upon that data as efficiently and normally as possible.
 
 Typing gives us the ability to perform all kinds of operations with predictable results. For instance, the ability to perform Math operations like SUM - i.e. summing integers - doesn't just depend on everything being an integer of some sort but would also expect it. If you tried, for example,  to SUM all of the dogs in the above table, SQLite would actually attempt to convert, or cast, their type to something it can SUM. It would try to convert anything it can to an INTEGER and ignore alpha characters. This can lead to real problems. Without typing, our data might get complicated and messy, and it would be difficult to ask the database questions about large sets of data.
 
@@ -45,7 +45,7 @@ Any alphanumeric characters which we want to represent as plain text. The body o
 
 ### INTEGER
 
-Anything we want to represent as a whole number. If it's a number and contains no letter or special characters or decimal points then we should store it as an integer. If we use it to perform math or create a comparison between two different rows in our database, then we definitely want to store it as an integer. If it's just numbers, it's generally not a bad idea to store it as an integer. You might never add two house address numbers together, but you might want to sort them numerically. For example in the preceding case, you might want to get the biggest number and not the longest piece of text.
+Anything we want to represent as a whole number. If it's a number and contains no letter or special characters or decimal points then we should store it as an integer. If we use it to perform math or create a comparison between two different rows in our database, then we definitely want to store it as an integer. If it's just a number, it's generally not a bad idea to store it as an integer. You might never add two house address numbers together, but you might want to sort them numerically. For example in the preceding case, you might want to get the biggest number and not the longest piece of text.
 
 ### REAL
 
@@ -62,7 +62,7 @@ To increase its compatibility with other database engines (E.G. mySQL or Postgre
 
 For example, `INT` is a common datatype used outside of SQLite. SQLite won't complain if you define a column as an `INT` datatype. It will simply lump it into the `INTEGER` category and store it as such.
 
-To accommodate this, SQLite has a pretty complicated system of categorizing datatypes that involves `Storage Classes`, `Type Affinities`, and `Datatypes`. If you want a deeper dive check out the 
+To accommodate this, SQLite has a pretty complicated system of categorizing datatypes that involves `Storage Classes`, `Type Affinities`, and `Datatypes`. For a deeper dive, check out the 
 [SQLite3 Documentation on Datatypes](http://www.sqlite.org/datatype3.html)
 
 
