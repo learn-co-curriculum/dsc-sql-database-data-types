@@ -67,3 +67,5 @@ To accommodate this, SQLite has a pretty complicated system of categorizing data
 
 
 
+
+<a href='https://learn.co/lessons/sql-sqlite-data-types-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
