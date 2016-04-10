@@ -11,7 +11,7 @@ In this lesson, we'll cover the importance of specifying datatypes, and the diff
 
 ## Why Do Data Types Matter?
 
-We've learned that when we create a table, we need to include a name for it as well as define at least one column. We define columns in a `CREATE` statement by including a name and a datatype to let SQLite know the kind of data it we will be storing there. The practice of explicitly declaring a type is known as "typing." 
+We've learned that when we create a table, we need to include a name for it as well as define at least one column. We define columns in a `CREATE` statement by including a name and a datatype to let SQLite know the kind of data we will be storing there. The practice of explicitly declaring a type is known as "typing." 
 
 Why is it important that we use typing in our database? Simply put, typing allows us to exercise some level of control over our data. Typing not only informs our database of the kind of data we plan to store in a column but it also restricts it. For instance, look at the age column below in our cats table. What do we mean by age? What if we had this:
 
@@ -69,3 +69,5 @@ To accommodate this, SQLite has a pretty complicated system of categorizing data
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-sqlite-data-types-readme' title='SQL Column Data Types'>SQL Column Data Types</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-sqlite-data-types-readme'>SQL Data Types</a> on Learn.co and start learning to code for free.</p>
