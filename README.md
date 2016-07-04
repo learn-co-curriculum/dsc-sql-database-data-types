@@ -51,7 +51,7 @@ Anything we want to represent as a whole number. If it's a number and contains n
 
 Anything that's a plain old decimal like 1.3 or 2.25. SQLite will store decimals up to 15 characters long. You can store 1.2345678912345 or 1234.5678912345, but 1.23456789123456789 would only store 1.2345678912345. In other database systems this is called 'double precision.'
 
-With these three types in hand, we are going to be able to work our way through the next several topics, and this whole typing concept is going to quickly be second nature for you.
+With these three types in hand, we are going to be able to work our way through the next several topics, and this whole typing concept is going to quickly become second nature for you.
 
 ### BLOB
 
@@ -66,3 +66,5 @@ To accommodate this, SQLite has a pretty complicated system of categorizing data
 [SQLite3 Documentation on Datatypes](http://www.sqlite.org/datatype3.html)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-sqlite-data-types-readme'>SQL Data Types</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/sql-sqlite-data-types-readme'>SQL Data Types</a> on Learn.co and start learning to code for free.</p>
