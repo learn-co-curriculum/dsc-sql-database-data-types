@@ -1,3 +1,4 @@
+
 # SQL Database Data Types
 
 ## Introduction
@@ -69,3 +70,4 @@ To accommodate this, SQLite has a pretty complicated system of categorizing data
 
 ## Summary
 Great! Now that you've finished this lesson you know why it is important to specify datatypes, and you know about the different types of data you can store in a SQLite database.
+
